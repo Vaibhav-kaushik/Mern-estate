@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 
 dotenv.config();
+console.log(process.env.MONGO);
 
 mongoose
   .connect(process.env.MONGO)
@@ -16,5 +17,5 @@ mongoose
 const app = express();
 
 app.listen(3000, () => {
-  console.log("hi what's up!");
+  console.log("server running at localhost:3000");
 });
